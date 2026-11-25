@@ -1,5 +1,11 @@
 # Config
 
+[![tests](https://github.com/jjgrainger/Config/actions/workflows/test.yml/badge.svg)](https://github.com/jjgrainger/Config/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/jjgrainger/Config/graph/badge.svg?token=JFOHSF8L1J)](https://codecov.io/gh/jjgrainger/Config)
+[![Latest Stable Version](https://badgen.net/github/release/jjgrainger/Config/stable)](https://packagist.org/packages/jjgrainger/Config)
+[![Total Downloads](https://badgen.net/packagist/dt/jjgrainger/Config)](https://packagist.org/packages/jjgrainger/Config)
+[![License](https://badgen.net/github/license/jjgrainger/Config)](https://packagist.org/packages/jjgrainger/Config)
+
 A lightweight PHP configuration library for loading configuration from files or directories.
 
 Configuration is represented as an immutable object, with support for nested values and dot notation.
