@@ -24,7 +24,7 @@ class ConfigTest extends TestCase
 
         $config = new Config($items);
 
-        $this->assertEquals($items, $config->all());
+        $this->assertSame($items, $config->all());
     }
 
     public function test_it_gets_value_from_config(): void

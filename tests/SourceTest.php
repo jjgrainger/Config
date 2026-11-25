@@ -35,13 +35,13 @@ class SourceTest extends TestCase
 
         $files = [
             [
-                'name' => 'app',
                 'path' => $this->directory . '/app.php',
+                'name' => 'app',
                 'extension' => 'php',
             ]
         ];
 
-        $this->assertEquals($files, $source->files());
+        $this->assertSame($files, $source->files());
     }
 
     public function test_it_returns_files_for_directory_location(): void
@@ -60,18 +60,18 @@ class SourceTest extends TestCase
 
         $files = [
             [
-                'name' => 'app',
                 'path' => $this->directory . '/app.php',
+                'name' => 'app',
                 'extension' => 'php',
             ],
             [
-                'name' => 'database',
                 'path' => $this->directory . '/database.php',
+                'name' => 'database',
                 'extension' => 'php',
             ],
         ];
 
-        $this->assertEquals($files, $source->files());
+        $this->assertSame($files, $source->files());
     }
 
     public function test_it_throws_exception_when_file_does_not_exist(): void

@@ -44,7 +44,7 @@ class PhpParserTest extends TestCase
         $parser = new PhpParser;
         $data = $parser->parse($this->directory . '/config.php');
 
-        $this->assertEquals(['app' => 'My Application'], $data);
+        $this->assertSame(['app' => 'My Application'], $data);
     }
 
     public function test_parse_empty_array(): void
@@ -57,7 +57,7 @@ class PhpParserTest extends TestCase
         $parser = new PhpParser;
         $data = $parser->parse($this->directory . '/config.php');
 
-        $this->assertEquals([], $data);
+        $this->assertSame([], $data);
     }
 
     public function test_parse_php_throws_exception_for_file_not_returning_array(): void

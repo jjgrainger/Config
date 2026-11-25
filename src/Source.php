@@ -66,6 +66,10 @@ class Source implements SourceContract
             $files[] = $this->metadata($file->getPathname());
         }
 
+        usort($files, static function (array $a, array $b): int {
+            return $a['name'] <=> $b['name'];
+        });
+
         return $files;
     }
 
