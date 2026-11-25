@@ -46,7 +46,7 @@ class JsonParserTest extends TestCase
         $parser = new JsonParser;
         $config = $parser->parse($this->directory . '/config.json');
 
-        $this->assertEquals($data, $config);
+        $this->assertSame($data, $config);
     }
 
     public function test_it_parses_empty_array(): void
@@ -59,7 +59,7 @@ class JsonParserTest extends TestCase
         $parser = new JsonParser;
         $config = $parser->parse($this->directory . '/config.json');
 
-        $this->assertEquals([], $config);
+        $this->assertSame([], $config);
     }
 
     public function test_it_throws_exception_for_file_not_returning_array(): void

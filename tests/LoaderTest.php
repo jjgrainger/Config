@@ -36,7 +36,7 @@ class LoaderTest extends TestCase
         $loader = new Loader([$parser]);
         $config = $loader->load($source);
 
-        $this->assertEquals(
+        $this->assertSame(
             [
                 'app' => [
                     'name' => 'App'
@@ -92,7 +92,7 @@ class LoaderTest extends TestCase
         $loader = new Loader([$php, $json]);
         $config = $loader->load($source);
 
-        $this->assertEquals(
+        $this->assertSame(
             [
                 'app' => [
                     'name' => 'App'
@@ -128,12 +128,10 @@ class LoaderTest extends TestCase
             ->willReturn(false);
 
         $parser->expects($this->never())
-            ->method('parse')
-            ->with('/app.php')
-            ->willReturn(['name' => 'App']);
+            ->method('parse');
 
 
         $loader = new Loader([$parser]);
-        $config = $loader->load($source);
+        $loader->load($source);
     }
 }
