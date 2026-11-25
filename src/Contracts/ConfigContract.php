@@ -8,5 +8,10 @@ interface ConfigContract
 
     public function has(string $key): bool;
 
+    /**
+     * Return the configuration array
+     *
+     * @return array<string, mixed>
+     */
     public function all(): array;
 }
