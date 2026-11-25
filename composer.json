@@ -1,5 +1,7 @@
 {
     "name": "jjgrainger/config",
+    "description": "A lightweight PHP configuration library for loading configuration from files or directories.",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Config\\": "src/"
